@@ -1,0 +1,534 @@
+@import url(//db.onlinewebfonts.com/c/862c83306ca682ad1bbc1e66410f108e?family=Cheddar+Jack);
+
+/*Global Syling*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+ 
+}
+
+/*CSS variables*/
+:root {
+  --main-font-color: #f2b632;
+  --main-white: #fff;
+  --main-font-dark-grey: #4d4d4d;
+  --main-footer-bg-color: #141414;
+  --main-font-family: "Cheddar Jack", cursive;
+}
+
+/* Mobile View*/
+
+/*General Styling*/
+section {
+  padding: 6rem 0;
+   overflow: hidden;
+}
+p {
+  line-height: 1.5;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--main-font-dark-grey);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+.btn {
+  display: inline-block;
+  transition: all 650ms;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.btn-info{
+    font-size:1.5rem;
+    padding:1rem;
+    color:var(--main-font-color);
+    border-bottom: 2px solid var(--main-font-color);
+    margin: 2rem 0 4rem 0;
+}
+.btn-info:hover{
+    background-color: var(--main-font-color);
+    color:var(--main-white);
+}
+
+.custom-font{
+    font-family:var(--main-font-family);
+    color:var(--main-font-color);
+    font-size: 6.5rem;
+    text-align: center;
+    line-height: 1;
+    font-weight:100;
+}
+.custom-font-sec{
+    text-transform:uppercase;
+    letter-spacing:5px;
+    margin-right: -5px;
+    font-size:2.5rem;
+    line-height: .2;
+    color: var(--main-font-dark-grey);
+    margin-bottom:5rem;
+}
+
+.container{
+    width:90%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.between-sec{
+    padding: 20rem 0;
+    text-align:center;
+}
+.between-sec-color{
+    color:var(--main-white);
+}
+
+/*Classes*/
+
+/*Header Syling*/
+header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent),
+    url("./images/chicken.jpg") bottom no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+   overflow: hidden;
+}
+
+/*header Nav Toggle Syling*/
+.menu {
+  padding: 2rem 2.5rem;
+  position: fixed;
+  top: 1.2rem;
+  right: 2rem;
+  background-color: --rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.menu .bar,
+.menu .bar::before,
+.menu .bar::after {
+  content: "";
+  width: 4rem;
+  height: 2px;
+  background-color: var(--main-white);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transition: 650ms;
+}
+.menu .bar::before {
+  top: -2rem;
+}
+
+.menu .bar::after {
+  bottom: -2rem;
+}
+
+.active .bar {
+  background-color: transparent;
+}
+.active .bar::before {
+  transform: rotate(45deg);
+}
+.active .bar::after {
+  transform: rotate(-45deg);
+}
+.active .bar::before,
+.active .bar::after {
+  top: 0px;
+  bottom: 0px;
+}
+/*header Nav  Syling*/
+.logo{
+    display:none;
+    text-transform: uppercase;
+    font-size:2rem;
+    font-weight:300;
+    margin-bottom:-5px;
+}
+.nav {
+  width: 100%;
+  height: 6rem;
+  line-height: 6rem;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.95);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: opacity 650ms;
+  transform: scale(0);
+  opacity: 0;
+}
+.overlay.menu-open {
+  transform: scale(1);
+  opacity: 1;
+}
+.nav .overlay ul {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav .overlay ul li {
+  text-transform: uppercase;
+}
+.nav .overlay ul li a {
+  display: block;
+  font-size: 2rem;
+  transition: all 650ms;
+}
+.nav .overlay ul li a:hover,
+.nav .overlay ul li a .active:hover {
+  color: var(--main-font-color);
+}
+
+/*header main-text Syling*/
+.main-text {
+  line-height: 0;
+  margin: auto;
+  color: var(--main-white);
+  user-select: none;
+}
+.main-text h1 {
+  font-family: var(--main-font-family);
+  color: var(--main-font-color);
+  font-size: 8rem;
+  font-weight: 100;
+  margin-bottom: 5rem;
+}
+.main-text h2 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-right: -5px;
+  font-size: 2rem;
+  line-height: 1;
+  position: relative;
+}
+.main-text h2::before,
+.main-text h2::after {
+  content: "";
+  width: 5rem;
+  height: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  background-color: var(--main-white);
+  border-radius: 8px;
+}
+.main-text h2::before {
+  left: -6rem;
+}
+.main-text h2::after {
+  right: -6rem;
+}
+
+.main-btn {
+  font-size: 1.5rem;
+  border: 2px solid var(--main-font-color);
+  padding: 2rem 2.5rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+  position: relative;
+  margin-top: 3rem;
+}
+.main-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.main-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+/*About Section  Syling*/
+
+
+.about-pic{
+    width: 100%;
+    min-height: 30rem;
+    background: url("./images/fries.jpg") center no-repeat;
+    background-size: cover;
+}
+
+/*Menu Section  Syling*/
+.our-menu{
+    width:100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), 
+    rgba(0, 0, 0, 0.5)), url("./images/5.jpg") center no-repeat;
+    background-size: cover;
+}
+
+/* Gallery Section  Syling*/
+
+
+.image-group{
+    display:grid;
+    grid-template-columns: 1fr ;
+    grid-gap:10px;
+}
+.image-group img{
+    width:100%;
+    height: 30rem;
+}
+
+/* Satisfied customers */
+.testimonial{
+    width:100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), 
+    rgba(0, 0, 0, 0.5)), url("./images/kebab.jpg") center no-repeat;
+    background-size: cover;
+}
+
+/*Contact/Booking Section  Syling*/
+.contact-us form{
+    width:100%;
+    min-width: 9rem;
+    margin-top:5rem;
+}
+
+.input,
+.text-area{
+    width:100%;
+    max-width:100%;
+    margin: 5px 0;
+    padding: 5px 1rem;
+    border-radius:3px;
+    font-size:1.5rem;
+    border:1px solid var(--main-font-color);
+    color: #878787;
+
+}
+.input::placeholder,
+.text-area::placeholder{
+    color:#878787;
+}
+.text-area{
+    height:10rem;
+}
+
+.btn-submit{
+    background-color:var(--main-font-color);
+    color: var(--main-white);
+    width:100%;
+    padding: 1rem 0;
+    cursor:pointer;
+}
+.btn-submit:hover{
+    background-color: #e1aa2f;
+}
+/*footer Section  Syling*/
+.footer{
+  width: 100%;
+
+}
+.main-footer{
+    width:90%;
+    display:grid;
+    grid-template-columns: 1fr ;
+    grid-gap: 5rem;
+    text-align: center;
+    background-color: var(--main-footer-bg-color);
+    color:var(--main-white);
+    font-size:1.8rem;
+    padding: 5rem 0;
+}
+.main-footer h4{
+    font-size: 3rem;
+    text-transform:uppercase;
+    margin-bottom: 1.5rem;
+    color: var(--main-font-color);
+    font-weight:100;
+    font-family:"Bebas Neue", sans-serif;
+}
+.main-footer h5{
+    font-weight: 100;
+}
+
+/*Added class: Use jquery to make navbar sticky on scroll*/
+.sticky {
+      position: fixed;
+      top: 0;
+      height:7rem;
+      width: 100%;
+      padding: 0 ;
+      background: var(--main-footer-bg-color);
+      z-index:998;
+    }
+/*Logo has already being style in the header: This is just temporary to check
+   out how things work, I may take it off later or leave it. It however over rides the initial one 
+   in the header sectioning styling above*/
+
+.logo{
+  display:block;
+  float:left;
+  padding:0.rem 0;
+  padding-left: 2.3rem;
+  color:var(--main-font-color);
+}
+
+
+
+/* Desktop View*/
+@media screen and (min-width:769px){
+  /*This gives parallex effext to bg-img in the "header and between sec" classes*/
+    header,
+    .between-sec{
+    background-attachment: fixed;
+    }
+    /*Header Section*/
+    .menu{
+        display:none;
+    }
+    .nav{
+        display:flex;
+        padding: 2rem 10 rem 0;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+      
+    }
+    
+    .logo{
+      display:block;
+      padding-top: 0.2rem;
+      color: var(--main-font-color);
+    }
+    .nav .overlay{
+        position:initial;
+        background:none;
+        opacity:initial;
+        transform:initial;
+    }
+    .nav .overlay ul{
+        flex-direction: row;
+        list-style: none;
+        margin-top:2px;
+    }
+
+    .nav .overlay ul li a{
+        font-size:1.5rem;
+        letter-spacing:1px;
+        margin-right:-1px;
+        padding: 0 2rem;
+
+    }
+    .sticky {
+       position: fixed;
+       height: 7rem;
+      top: 0;
+      width: 100%;
+      padding: 0 5%;
+      background: var(--main-footer-bg-color);
+      opacity: 0.9;
+      z-index:1000;
+    }
+    /*General Styling*/
+    .container{
+        display:flex;
+        flex-direction:row;
+        text-align:center;
+        width:90%;
+        margin: 0 auto;
+        
+    }
+    .center{
+        flex:1;
+    }
+   
+    .add-flex{
+        flex:1;
+    }
+    
+    .add-padding-right{
+      padding-right: 10rem;
+    }
+    .btn-info{
+      font-size: 1.8rem;
+    }
+
+    /*about section desktop view*/
+    .about-pic{
+      min-height:40rem;
+    }
+   /* Gallery Section  Syling*/
+
+
+.image-group{
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap:10px;
+}
+.image-group img{
+    width:100%;
+    height: 30rem;
+}
+/*This styling swaps the position of element*/
+
+  .first{
+    order:1;
+  }
+
+  .second{
+    order:2;
+  }
+/*Footer section*/
+.footer{
+width:100%;
+background-color: var(--main-footer-bg-color);
+}
+.main-footer{
+    width:90%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    color:var(--main-white);
+    font-size:1.8rem;
+    padding: 3rem 0 .5rem 0;
+}
+
+.footer-links{
+  width:90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border:1px solid white;
+}
+ .copyright{
+   display: block;
+   text-align: center;
+   background-color: black;
+   padding: 2rem 0;
+
+ }
+
+    
+
+}
