@@ -1,0 +1,367 @@
+body {
+  margin: auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 2fr);
+  grid-template-rows: 600px 300px 75px 300px 75px 300px 75px 80px;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  grid-gap: 25px;
+  max-width: 1400px;
+  /*this property sets an innate media query on the entire wrapper so it fits all screens*/
+  background-color: #f4f4f4;
+  /*box-shadow: 0 5px 8px rgb(235, 93, 37), 0 7px 20px 0 rgba(12, 12, 12, 0.767);*/
+  background-size: 100%;
+  padding: 0px;
+  margin: auto;
+  font-family: candara;
+}
+
+.header {
+  grid-column: span 12;
+  background-color: rgb(116, 79, 141);
+  font-family: candara;
+  font-size: 20px;
+  padding: 0px;
+  border-radius: 0px;
+  border-bottom: 2px solid #E8542B;
+  background-image: url("./images/between.jpeg");
+  background-size: cover;
+  -webkit-transition: background-image 0.5s;
+  /* Other vendor-prefixed transition properties */
+  transition: background-image 0.5s;
+}
+
+.header:hover {
+  background-image: url("./images/chicken.jpg");
+}
+
+/*#hdrimg {
+    border-radius: 5px 5px 5px 5px;
+    max-width: 1200px;
+    max-height: 100%;
+}
+*/
+.col2 {
+  background: url("./images/1.jpg") center no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-column: span 3;
+  background-color: brown;
+  font-family: candara;
+  padding: 10px;
+}
+
+.col3 {
+  background: url("./images/jol.jpg") center no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(201, 162, 162);
+  font-family: candara;
+  padding: 10px;
+  -webkit-transition: background-image 0.5s;
+  /* Other vendor-prefixed transition properties */
+  transition: background-image 0.5s;
+}
+
+.col3:hover {
+  background-image: url("./other_images/IMG-20190616-WA0055.jpg");
+}
+
+.col4 {
+  background: url("./images/chicken.jpg") center no-repeat;
+  background-size: cover;
+  /* box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.5); */
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(113, 196, 59);
+  font-family: candara;
+  padding: 10px;
+  -webkit-transition: background-image 0.5s;
+  /* Other vendor-prefixed transition properties */
+  transition: background-image 0.5s;
+}
+
+.col4:hover {
+  background-image: url("./other_images/col4img.jpg");
+}
+
+.col5 {
+  background-image: url("./other_images/col5img.jpg");
+  background-size: cover;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(200, 214, 207);
+  font-family: candara;
+  padding: 10px;
+  transition: background-image 0.5s;
+}
+
+.col5:hover {
+  background-image: url("./other_images/FB_IMG_1554966028725.jpg");
+}
+
+.col6 {
+  text-align: center;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 15px 15px 15px;
+  border-left: 2px solid rgb(255, 87, 26);
+  border-right: 2px solid rgb(255, 87, 26);
+  font-family: candara;
+  padding: 5px;
+}
+
+.col7 {
+  text-align: center;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 15px 15px 15px;
+  border-left: 2px solid rgb(255, 87, 26);
+  border-right: 2px solid rgb(255, 87, 26);
+  font-family: candara;
+  padding: 5px;
+}
+
+.col8 {
+  text-align: center;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 15px 15px 15px;
+  border-left: 2px solid rgb(255, 87, 26);
+  border-right: 2px solid rgb(255, 87, 26);
+  font-family: candara;
+  padding: 5px;
+}
+
+.col9 {
+  text-align: center;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 15px 15px 15px;
+  border-left: 2px solid rgb(255, 87, 26);
+  border-right: 2px solid rgb(255, 87, 26);
+  font-family: candara;
+  padding: 5px;
+}
+
+.col10 {
+  background-image: url("./other_images/col10img.jpg");
+  background-size: cover;
+  display: grid;
+  grid-column: span 3;
+  background-color: brown;
+  font-family: candara;
+  padding: 10px;
+}
+
+.col11 {
+  background-image: url("./other_images/col11img.jpg");
+  background-size: cover;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(201, 162, 162);
+  font-family: candara;
+  padding: 10px;
+}
+
+.col12 {
+  background-image: url("./images/kewele.jpg");
+  background-size: cover;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(113, 196, 59);
+  font-family: candara;
+  padding: 10px;
+}
+
+.col13 {
+  background-image: url("./other_images/col13img.jpg");
+  background-size: cover;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(200, 214, 207);
+  font-family: candara;
+  padding: 10px;
+}
+
+.col14 {
+  text-align: center;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 15px 15px 15px;
+  border-left: 2px solid rgb(255, 87, 26);
+  border-right: 2px solid rgb(255, 87, 26);
+  font-family: candara;
+  padding: 5px;
+}
+
+.col15 {
+  text-align: center;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 15px 15px 15px;
+  border-left: 2px solid rgb(255, 87, 26);
+  border-right: 2px solid rgb(255, 87, 26);
+  font-family: candara;
+  padding: 5px;
+}
+
+.col16 {
+  text-align: center;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 15px 15px 15px;
+  border-left: 2px solid rgb(255, 87, 26);
+  border-right: 2px solid rgb(255, 87, 26);
+  font-family: candara;
+  padding: 5px;
+}
+
+.col17 {
+  text-align: center;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 15px 15px 15px;
+  border-left: 2px solid rgb(255, 87, 26);
+  border-right: 2px solid rgb(255, 87, 26);
+  font-family: candara;
+  padding: 5px;
+}
+
+.col18 {
+  background-image: url("./other_images/col18img.jpg");
+  background-size: cover;
+  display: grid;
+  grid-column: span 3;
+  background-color: brown;
+  font-family: candara;
+  padding: 10px;
+  transition: background-image 0.5s;
+}
+
+.col18:hover {
+  background-image: url("./other_images/IMG-20190616-WA0050.jpg");
+}
+
+.col19 {
+  background-image: url("./images/pork2.jpg");
+  background-size: cover;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(201, 162, 162);
+  font-family: candara;
+  padding: 10px;
+}
+
+.col20 {
+  background-image: url("./images/4.jpg");
+  background-size: cover;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(113, 196, 59);
+  font-family: candara;
+  padding: 10px;
+}
+
+.col21 {
+  background-image: url("./images/2.jpg");
+  background-size: cover;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(200, 214, 207);
+  font-family: candara;
+  padding: 10px;
+}
+
+.col22 {
+  text-align: center;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 15px 15px 15px;
+  border-left: 2px solid rgb(255, 87, 26);
+  border-right: 2px solid rgb(255, 87, 26);
+  font-family: candara;
+  padding: 5px;
+}
+
+.col23 {
+  text-align: center;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 15px 15px 15px;
+  border-left: 2px solid rgb(255, 87, 26);
+  border-right: 2px solid rgb(255, 87, 26);
+  font-family: candara;
+  padding: 5px;
+}
+
+.col24 {
+  text-align: center;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 15px 15px 15px;
+  border-left: 2px solid rgb(255, 87, 26);
+  border-right: 2px solid rgb(255, 87, 26);
+  font-family: candara;
+  padding: 5px;
+}
+
+.col25 {
+  text-align: center;
+  display: grid;
+  grid-column: span 3;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px 15px 15px 15px;
+  border-left: 2px solid rgb(255, 87, 26);
+  border-right: 2px solid rgb(255, 87, 26);
+  font-family: candara;
+  padding: 5px;
+}
+
+.footer {
+  border-radius: 15px 15px 15px 15px;
+  border-top: 2px solid #E8542B;
+  border-bottom: 2px solid #E8542B;
+  display: grid;
+  grid-column: span 12;
+  background-color: rgb(0, 0, 0);
+}
+
+p {
+  margin: auto;
+  color: white;
+}
+
+h3 {
+  font-family: cursive;
+  text-align: center;
+  font-size: 13px;
+  color: rgb(0, 0, 0);
+}
+
+h4 {
+  font-family: cursive;
+  text-align: center;
+  font-size: 10px;
+  color: #E8542B;
+}
+
+b {
+  font-size: 15px;
+  text-decoration: '';
+}
